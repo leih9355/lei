@@ -1,0 +1,276 @@
+\documentclass[table,UTF8]{beamer}  
+% 默认页面大小 4:3
+%\documentclass[10pt]{ctexbeamer}
+% 页面大小 16:10
+% \documentclass[10pt, aspectratio=1610]{ctexbeamer}
+% 页面大小 16:9
+% \documentclass[10pt, aspectratio=169]{ctexbeamer}
+% 页面大小 14:9
+% \documentclass[10pt, aspectratio=149]{ctexbeamer}
+% 页面大小 1.41:1
+% \documentclass[10pt, aspectratio=141]{ctexbeamer}
+% 页面大小 5:4
+% \documentclass[10pt, aspectratio=54]{ctexbeamer}
+% 页面大小 3:2
+% \documentclass[10pt, aspectratio=32]{ctexbeamer}
+%\documentclass[10pt, aspectratio=32]{beamer}
+\usepackage[absolute,overlay,showboxes]{textpos}
+%\usetheme[logo=UCAS, sublogo=AMSS]{ucas}
+% logo 的选项: CAS, UCAS
+% sublogo 的选项: AMSS, AMSS2018, UCAS
+% 引入参考文献列表的 .bib 文件, 使用 GB/T 7714-2015 的文献著录规则.
+\usepackage[backend=biber, style=gb7714-2015]{biblatex}
+%\usepackage[colorlinks,linkcolor=red]{hyperref}
+\usepackage{graphics}
+%\usepackage[UTF8,noindent]{ctexcap}
+%\usetheme{madrid}  
+\usepackage{verbatim}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage[absolute,overlay,showboxes]{textpos}
+\usepackage[backend=biber, style=gb7714-2015]{biblatex}
+
+\setbeamertemplate{footline}[frame number]
+%\usetheme[]{Warsaw}
+\begin{document}  
+
+%封面
+\begin{frame}  
+\title[]{GGSZ Fit}  
+%\subtitle {--From my perspective}  
+\author{Lei Hao}  
+\institute{UCAS}
+\date{\today}  
+\titlepage  
+\end{frame}  
+
+%目录
+\begin{frame}{contents}  
+    \tableofcontents  
+\end{frame}
+
+\section{fit result from GGSZ package}
+\begin{frame}  {fit result from GGSZ package}{$c_i,s_i,K_i$(the sama as $B\rightarrow D^0h$)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/cisi.PNG}
+    \caption{from the combination of CLEO and BES}
+    \label{fig:my_label}
+\end{figure} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/Ki.PNG}
+    \caption{the solution of Ki}
+    \label{fig:my_label}
+\end{figure} 
+%\begin{itemize}%[<+->]%逐个显示
+%\item Symbian  
+%\item BlackBerry 
+%\end{itemize}  
+\end{frame} 
+
+\begin{frame}{comparison between $B\rightarrow D^0h$ in Ki}
+\begin{table}[]
+    \centering
+    \resizebox{\textwidth}{!}{
+   \begin{tabular}{|c|c|c|c|c|c|}
+    bin_number &    $r_{\frac{B\rightarrow D^*h}{B\rightarrow D^0h}}$ & $K_i$ & bin_number &    $r_{\frac{B\rightarrow D^*h}{B\rightarrow D^0h}}$ & $K_i$\\
+  $bin_{-8}$  &  $1.072\pm 0.005$ & $0.024\pm0.0006$ & $bin_{8}$ & $1.064\pm0.005$ & $0.067\pm0.001$\\
+   $bin_{-7}$ & $1.080\pm0.003$ & $0.127\pm0.0013$ &$bin_{7}$ & $1.073\pm0.003$ & $0.055\pm0.0009$\\
+    $bin_{-6}$ & $1.092\pm0.010$ & $0.062\pm0.001$ & $bin_{6}$ & $1.080\pm0.010$ & $0.004\pm0.0003$\\
+    $bin_{-5}$ & $1.086\pm0.006$ & $0.046\pm0.0008$ & $bin_{5}$& $1.104\pm0.006$ & $0.027\pm0.0006$\\
+    $bin_{-4}$ & $1.075\pm0.005$ & $0.095\pm0.0012$ &$bin_{4}$&$1.085\pm0.006$& $0.055\pm0.0009$\\
+   $bin_{-3}$ & $1.083\pm0.006$ & $0.16\pm0.0014$ &$bin_3$ & $1.068\pm0.006$&$0.004\pm0.0003$\\
+    $bin_{-2}$ & $1.068\pm0.005$ & $0.153\pm0.0014$&$bin_2$&$1.068\pm0.005$&$0.005\pm0.0003$\\
+    $bin_{-1}$ & $1.082\pm0.004$ & $0.095\pm0.0012$&$bin_1$&$1.080\pm0.003$&$0.022\pm0.0006$\\
+    \end{tabular}}
+    \caption{$K_i$}
+    \label{tab:my_label}
+\end{table}
+    \begin{table}[]
+    \centering
+    \resizebox{\textwidth}{!}{
+   \begin{tabular}{|c|c|c|c|c|c|}
+    bin_number &    $r_{\frac{B\rightarrow D^*h}{B\rightarrow D^0h}}$ & $K_i$ & bin_number &    $r_{\frac{B\rightarrow D^*h}{B\rightarrow D^0h}}$ & $K_i$\\
+  $bin_{-8}$  &  $1.072\pm 0.005$ & $0.0265\pm0.00044$ & $bin_{8}$ & $1.064\pm0.005$ & $0.067\pm0.001$\\
+   $bin_{-7}$ & $1.080\pm0.003$ & $0.127\pm0.0013$ &$bin_{7}$ & $1.073\pm0.003$ & $0.055\pm0.0009$\\
+    $bin_{-6}$ & $1.092\pm0.010$ & $0.062\pm0.001$ & $bin_{6}$ & $1.080\pm0.010$ & $0.004\pm0.0003$\\
+    $bin_{-5}$ & $1.086\pm0.006$ & $0.046\pm0.0008$ & $bin_{5}$& $1.104\pm0.006$ & $0.027\pm0.0006$\\
+    $bin_{-4}$ & $1.075\pm0.005$ & $0.095\pm0.0012$ &$bin_{4}$&$1.085\pm0.006$& $0.055\pm0.0009$\\
+   $bin_{-3}$ & $1.083\pm0.006$ & $0.16\pm0.0014$ &$bin_3$ & $1.068\pm0.006$&$0.004\pm0.0003$\\
+    $bin_{-2}$ & $1.068\pm0.005$ & $0.153\pm0.0014$&$bin_2$&$1.068\pm0.005$&$0.005\pm0.0003$\\
+    $bin_{-1}$ & $1.082\pm0.004$ & $0.095\pm0.0012$&$bin_1$&$1.080\pm0.003$&$0.022\pm0.0006$\\
+    \end{tabular}}
+    \caption{$K_i$}
+    \label{tab:my_label}
+\end{table}
+\end{frame}
+
+\begin{frame}  {fit result from GGSZ package}{$x_+,y_+,x_-,y_-$}
+
+%\begin{block}{}  
+%直角三角形的斜边的平方等于两直角边的平方和。  
+%可以用符号语言表述为：设直角三角形ABC，其中$\angle %C=90^\circ$则有  
+%\begin{equation}  
+%AB^2=BC^2+AC^2  
+%\end{equation}  
+%\end{block}  
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+$x_+$     &  $1.10\times 10^{-01}\pm 2.74\times 10^{-02}$ \\
+\hline
+$x_-$     &  $-2.99\times 10^{-02} \pm 2.68\times 10^{-02} $ \\
+\hline
+$y_+$     &  $2.42\times 10^{-02}\pm 3.98\times 10^{-02}$ \\
+\hline
+$y_-$     &   $-6.02\times 10^{-02}\pm 3.07\times 10^{-02}$\\
+\hline
+$x_{\xi}$ & $-3.50\times 10^{-02}\pm6.88\times 10^{-02}$ \\
+\hline
+$y_{\xi}$ & $-1.04\times 10^{-1} \pm 6.63\times 10^{-2}$ \\
+\hline
+    \end{tabular}
+    \caption{$x_+,x_-,y_+,y_-$ from GGSZ package}
+    \label{tab:x,y_value}
+ 
+%    \begin{tabular}{|c|c|c|c|c|}
+%    \hline
+%     &$x_+$&$x_-$ &$y_+$ &$y_-$ \\
+%    \hline
+%$x_+$     &   &  &  &  & \\
+%\hline
+%%$x_-$     &   &   &   &   & \\
+%\hline
+%$y_+$     &  &  &  &  & \\
+%\hline
+%$y_-$     &   &  &   &  &\\
+%\hline
+%    \end{tabular}
+%    \caption{correlation of $x_+,x_-,y_+,y_-$ }
+ %   \label{tab:correlation_of_xy}
+
+\end{table}
+
+\end{frame}  
+
+\section{toy result}
+\begin{frame}{toy results}
+\begin{figure}[H]
+    \centering
+    \subfigure[value of x,y]{\label{figure1.sub.1}
+    \includegraphics[width=0.47\textwidth]{figures/toy_xy.PNG}}
+    \subfigure[error of x,y]{\label{figure1.sub.2}
+    \includegraphics[width=0.47\textwidth]{figures/xy_err.PNG}}
+    \caption{toy results}
+    \label{fig:toy_result1}
+\end{figure}
+\begin{table}[h]
+    \centering
+    \scalebox{0.4}{
+    \begin{tabular}{|c|c|}
+    \hline
+$x_+$     &  $1.10\times 10^{-01}\pm 2.74\times 10^{-02}$ \\
+\hline
+$x_-$     &  $-2.99\times 10^{-02} \pm 2.68\times 10^{-02} $ \\
+\hline
+$y_+$     &  $2.42\times 10^{-02}\pm 3.98\times 10^{-02}$ \\
+\hline
+$y_-$     &   $-6.02\times 10^{-02}\pm 3.07\times 10^{-02}$\\
+\hline
+    \end{tabular}}
+    \caption{$x_+,x_-,y_+,y_-$ from GGSZ package}
+    \label{tab:x,y_value}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}{Toy result}
+    \begin{figure}[H]
+        \centering
+        \subfigure[pull distribution]{
+        \includegraphics[width=0.47\textwidth]{figures/xy_pull.PNG}
+        }
+        \subfigure[gauss fit result]{
+        \includegraphics[width=0.47\textwidth]{pull_gaussfit.PNG}
+        }
+        \caption{pull of x,y}
+        \label{fig:my_label}
+    \end{figure}
+\end{frame}
+
+\section{gamma angle}
+\begin{frame}{$\gamma$ angle}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{figures/gamma_angle.PNG}
+    \caption{$\gamma$ angle}
+    \label{fig:my_label}
+\end{figure}
+    \begin{itemize}
+        \item $\gamma = XX\pm 14^{\circ}$
+        \item $\chi^2/(nObs - nPar) = 1.22/(6-5)=1.22$
+    \end{itemize}
+\end{frame}
+\begin{frame}{$\gamma$ angle}{with GammaCombo}
+    \begin{figure}[H]
+        \centering
+        \subfigure[$\delta$ angle]{\label{figure.sub.1}
+        \includegraphics[width=0.45\textwidth]{figures/deltaB.PNG}}
+        \subfigure[$r_B^{D^*K}$]{\label{figure.sub.2}
+        
+        \includegraphics[width=0.45\textwidth]{figures/rB.PNG}
+        }
+        \caption{parameters }
+        \label{fig:parameters}
+    \end{figure}
+\end{frame}
+\begin{frame}{$\gamma$ angle}{with GammaCombo}
+    \begin{figure}[H]
+        \centering
+        \subfigure[$r_B^{D^*\pi}$ angle]{\label{figure.sub.1}
+        \includegraphics[width=0.45\textwidth]{figures/rBDpi.PNG}}
+        \subfigure[$\delta_B^{D^*\pi}$]{\label{figure.sub.2}
+        \includegraphics[width=0.45\textwidth]{figures/deltaBDpi.PNG}
+        }
+        \caption{parameters }
+        \label{fig:parameters}
+    \end{figure}
+    \begin{itemize}
+        \item $r_B^{D^*\pi}=0.009\pm0.006$
+        \item $\delta_B^{D^*\pi}=202.28^{\circ}\pm36^{\circ}$
+    \end{itemize}
+\end{frame}
+
+\section{summary} 
+\begin{frame}{summary}
+\begin{itemize}
+    \item The toy could be run in the grid
+    \item The parameters have been exacted with GammCombo and the result from GGSZ package
+    \item $\gamma = XX\pm 14^{\circ}, r_B^{D^*K} = 0.092\pm 0.02, \delta_B = 128^{\circ}\pm 14^{\circ}$
+    \item The comparison of $K_i$ with $B\rightarrow D^0h$ analysis is ongoing
+\end{itemize}
+\end{frame}
+
+
+%列表
+
+
+%定理、区块、公式
+
+
+%图形插入
+%和文本相同的路径下面放置一张图片
+%如需添加logo，则可以在导言区放置如下的代码：\logo{\includegraphic{logo.pdf}}
+
+
+
+
+
+
+\end{document}
